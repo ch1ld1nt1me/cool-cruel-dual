@@ -1,0 +1,26 @@
+diff --git a/src/generate/generate_A_b.py b/src/generate/generate_A_b.py
+index 9094b5d..5e0a77d 100644
+--- a/src/generate/generate_A_b.py
++++ b/src/generate/generate_A_b.py
+@@ -534,7 +534,7 @@ def describe(reduced_A, orig_A):
+ 
+     # Recommended hamming weights
+     max_brute_force_bits = 0
+-    while math.comb(n_cruel_bits, max_brute_force_bits + 1) < 100_000_000_000:
++    while math.comb(n_cruel_bits, max_brute_force_bits + 1) < 100_000_000_000 and max_brute_force_bits < n_cruel_bits:
+         max_brute_force_bits += 1
+ 
+     max_h = int(max_brute_force_bits / n_cruel_bits * params.N)
+@@ -609,9 +609,9 @@ if __name__ == "__main__":
+         dirname = os.path.dirname(params.secret_path).split("/")[-1]
+         try:
+             s = np.load(params.secret_path)
+-            params.secret_type = dirname.split('_')[0]
+-            params.min_hamming = int(dirname.split('_')[-2][1:])
+-            params.max_hamming = int(dirname.split('_')[-1])
++            # params.secret_type = dirname.split('_')[0]
++            # params.min_hamming = int(dirname.split('_')[-2][1:])
++            # params.max_hamming = int(dirname.split('_')[-1])
+             params.num_secret_seeds = s.shape[-1] // (params.max_hamming - params.min_hamming + 1)
+             print(params.min_hamming, params.max_hamming)
+         except Exception as e:

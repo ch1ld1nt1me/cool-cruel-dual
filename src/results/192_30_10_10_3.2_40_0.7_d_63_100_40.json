@@ -1,0 +1,21 @@
+{
+  "attack_params": {
+    "n": 192,
+    "log_q": 30,
+    "log_p": 10,
+    "w": 10,
+    "lwe_sigma": 3.2,
+    "beta": 40,
+    "single_guess_succ": 0.7,
+    "float_type": "d",
+    "k": 63,
+    "m": 100,
+    "b": 40
+  },
+  "repeats_distr": {},
+  "runtimes": [],
+  "avg runtime": 0.0,
+  "avg repeats": 0,
+  "successful": 0,
+  "success_prob": 0.0
+}

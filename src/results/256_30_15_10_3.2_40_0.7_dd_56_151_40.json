@@ -1,0 +1,29 @@
+{
+  "attack_params": {
+    "n": 256,
+    "log_q": 30,
+    "log_p": 15,
+    "w": 10,
+    "lwe_sigma": 3.2,
+    "beta": 40,
+    "single_guess_succ": 0.7,
+    "float_type": "dd",
+    "k": 56,
+    "m": 151,
+    "b": 40
+  },
+  "repeats_distr": {
+    "3": 1,
+    "4": 1,
+    "9": 1
+  },
+  "runtimes": [
+    2188.3430409431458,
+    2251.4869837760925,
+    2240.493783712387
+  ],
+  "avg runtime": 2226.7746028105416,
+  "avg repeats": 5.333333333333333,
+  "successful": 3,
+  "success_prob": 0.3
+}

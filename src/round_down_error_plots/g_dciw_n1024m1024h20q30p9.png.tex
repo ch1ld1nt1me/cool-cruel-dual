@@ -1,0 +1,58 @@
+% This file was created with matplot2tikz v0.1.0.
+\begin{tikzpicture}
+
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+tick align=outside,
+tick pos=left,
+x grid style={darkgray176},
+xmin=-12.1, xmax=12.1,
+xtick style={color=black},
+y grid style={darkgray176},
+ymin=-15.9, ymax=333.9,
+ytick style={color=black}
+]
+\addplot [thick, steelblue31119180]
+table {%
+-11 0
+-10 4.01398205401579e-22
+-9 1.39958899275426e-12
+-8 3.8250924545364e-08
+-7 3.12248797762756e-05
+-6 0.00421550417959433
+-5 0.174234348390648
+-4 2.94014978050111
+-3 23.6844424581737
+-2 99.7965380197097
+-1 232.102319982067
+0 306.596137287693
+1 232.102319982067
+2 99.7965380197097
+3 23.6844424581737
+4 2.94014978050111
+5 0.174234348390648
+6 0.00421550417959434
+7 3.12248797762756e-05
+8 3.82509245453641e-08
+9 1.39958899275426e-12
+10 4.01398205401579e-22
+11 0
+};
+\addplot [semithick, darkorange25512714]
+table {%
+-4 3
+-3 12
+-2 110
+-1 248
+0 318
+1 225
+2 89
+3 17
+4 2
+};
+\end{axis}
+
+\end{tikzpicture}

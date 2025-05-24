@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{pgfplots}
+\begin{document}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+%%ymode=log,
+axis lines=left,
+cycle list name=exotic,
+%%width = 1.1\textwidth, 
+%%height = 0.8\textwidth,
+grid = major,
+grid style = {dashed, gray!30},
+%title style={at={(0.5,1.1)},anchor=north},
+title = { $q = 2^{5}$ },
+x=1,
+xmin=1,
+xmax=128,
+y=60,
+ymin=0,
+ymax=1.1,
+xlabel = {Column index},
+ylabel = {${\sqrt{12}\sigma}/{\sqrt{q^2-1}}$},
+xticklabel style = {font=\scriptsize},
+yticklabel style = {font=\scriptsize,
+    /pgf/number format/fixed,
+    /pgf/number format/precision=1 },
+]
+\addplot table [x=i, y=s, col sep=comma, only marks] {5.csv};
+\draw [ultra thick, red!60] (80,0) -- (80,100);
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+%%ymode=log,
+axis lines=left,
+cycle list name=exotic,
+%%width = 1.1\textwidth, 
+%%height = 0.8\textwidth,
+grid = major,
+grid style = {dashed, gray!30},
+%title style={at={(0.5,1.1)},anchor=north},
+title = { $q = 2^{10}$ },
+x=1,
+xmin=1,
+xmax=128,
+y=60,
+ymin=0,
+ymax=1.1,
+xlabel = {Column index},
+ylabel = {${\sqrt{12}\sigma}/{\sqrt{q^2-1}}$},
+xticklabel style = {font=\scriptsize},
+yticklabel style = {font=\scriptsize,
+    /pgf/number format/fixed,
+    /pgf/number format/precision=1 },
+]
+\addplot table [x=i, y=s, col sep=comma, only marks] {10.csv};
+\draw [ultra thick, red!60] (51,0) -- (51,100);
+\end{axis}
+\end{tikzpicture}
+\\\vspace*{0.4cm}
+\begin{tikzpicture}
+\begin{axis}[
+%%ymode=log,
+axis lines=left,
+cycle list name=exotic,
+%%width = 1.1\textwidth, 
+%%height = 0.8\textwidth,
+grid = major,
+grid style = {dashed, gray!30},
+%title style={at={(0.5,1.1)},anchor=north},
+title = { $q = 2^{15}$ },
+x=1,
+xmin=1,
+xmax=128,
+y=60,
+ymin=0,
+ymax=1.1,
+xlabel = {Column index},
+ylabel = {${\sqrt{12}\sigma}/{\sqrt{q^2-1}}$},
+xticklabel style = {font=\scriptsize},
+yticklabel style = {font=\scriptsize,
+    /pgf/number format/fixed,
+    /pgf/number format/precision=1 },
+]
+\addplot table [x=i, y=s, col sep=comma, only marks] {15.csv};
+\draw [ultra thick, red!60] (12,0) -- (12,100);
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[
+%%ymode=log,
+axis lines=left,
+cycle list name=exotic,
+%%width = 1.1\textwidth, 
+%%height = 0.8\textwidth,
+grid = major,
+grid style = {dashed, gray!30},
+%title style={at={(0.5,1.1)},anchor=north},
+title = { $q = 2^{20}$ },
+x=1,
+xmin=1,
+xmax=128,
+y=60,
+ymin=0,
+ymax=1.1,
+xlabel = {Column index},
+ylabel = {${\sqrt{12}\sigma}/{\sqrt{q^2-1}}$},
+xticklabel style = {font=\scriptsize},
+yticklabel style = {font=\scriptsize,
+    /pgf/number format/fixed,
+    /pgf/number format/precision=1 },
+]
+\addplot table [x=i, y=s, col sep=comma, only marks] {20.csv};
+\draw [ultra thick, red!60] (0,0) -- (0,100);
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{document}
