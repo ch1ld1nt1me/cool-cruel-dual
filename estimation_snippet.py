@@ -37,22 +37,22 @@ def get_parser():
     )
 
     parser.add_argument(
-    "--n", default=256, type=int, help="LWE secret dimension"
+    "--n", default=1024, type=int, help="LWE secret dimension"
     )
 
     parser.add_argument(
-    "--q", default=3329, type=int, help="LWE modulus"
+    "--q", default=2**30, type=int, help="LWE modulus"
     )
 
     parser.add_argument(
-    "--h", default=12, type=int, help="LWE secret Hamming weight"
+    "--h", default=32, type=int, help="LWE secret Hamming weight"
     )
 
     parser.add_argument(
-    "--sd", default=1.22, type=float, help="LWE error standard deviation"    )
+    "--sd", default=3.2, type=float, help="LWE error standard deviation"    )
 
     parser.add_argument(
-    "--m", default=256, type=int, help="number of LWE samples"
+    "--m", default=1024, type=int, help="number of LWE samples"
     )
 
     return parser
