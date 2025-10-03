@@ -7,6 +7,7 @@ In this repository we include:
 - code to generate the [table](#generating-the-results-table) with our results,
 - code to generate the rounding [error plots](#generating-rounding-error-plots) in the appendices,
 - code to to generate the [cruel bits plots](#generating-cruel-bits-and-z-shape-prediction-plots) in the appendices.
+- a zip file ``eurocrypt2026-paper388-accompanying_code.zip`` with the implementation of G+V attack.
 
 ## Dependencies
 
